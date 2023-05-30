@@ -55,7 +55,7 @@ class Blog(models.Model):
     image = models.ImageField(verbose_name='تصویر شاخص')
     description = models.TextField(verbose_name='توضیحات')
     available = models.BooleanField(default=True,verbose_name='فعال/غیرفعال')
-    created = models.DateTimeField()
+    created = models.DateTimeField(auto_now_add=True)
     writer= models.ForeignKey(User, on_delete=models.CASCADE,verbose_name='نویسنده')
 
 
