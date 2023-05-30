@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jalali_date',
+    
     # Local apps
     'eshop_products',
     'eshop_accounts',
@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'eshop_contact',
     'eshop_settings',
     # Third-party apps
-    'ckeditor',
-    'ckeditor_uploader',
+    
     'django_render_partial',
     'star_ratings',
     'eshop_blog'
@@ -55,29 +54,29 @@ INSTALLED_APPS = [
 ]
 
 
-JALALI_DATE_DEFAULTS = {
-   'Strftime': {
-        'date': '%y/%m/%d',
-        'datetime': '%H:%M:%S _ %y/%m/%d',
-    },
-    'Static': {
-        'js': [
-            # loading datepicker
-            'admin/js/django_jalali.min.js',
-            # OR
-            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.core.js',
-            # 'admin/jquery.ui.datepicker.jalali/scripts/calendar.js',
-            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc.js',
-            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc-fa.js',
-            # 'admin/js/main.js',
-        ],
-        'css': {
-            'all': [
-                'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css',
-            ]
-        }
-    },
-}
+# JALALI_DATE_DEFAULTS = {
+#    'Strftime': {
+#         'date': '%y/%m/%d',
+#         'datetime': '%H:%M:%S _ %y/%m/%d',
+#     },
+#     'Static': {
+#         'js': [
+#             # loading datepicker
+#             'admin/js/django_jalali.min.js',
+#             # OR
+#             # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.core.js',
+#             # 'admin/jquery.ui.datepicker.jalali/scripts/calendar.js',
+#             # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc.js',
+#             # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc-fa.js',
+#             # 'admin/js/main.js',
+#         ],
+#         'css': {
+#             'all': [
+#                 'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css',
+#             ]
+#         }
+#     },
+# }
 
 
 MIDDLEWARE = [
@@ -175,13 +174,13 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")
 
-CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT)
-CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-CKEDITOR_RESTRICT_BY_USER = True
-CKEDITOR_MEDIA_PREFIX = "/media/ckeditor/"
-CKEDITOR_UPLOAD_PREFIX = "http://fortezzeimperiali/media/uploads/"
-CKEDITOR_RESTRICT_BY_USER = True
-CKEDITOR_IMAGE_BACKEND = "pillow"
+# CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT)
+# CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+# CKEDITOR_RESTRICT_BY_USER = True
+# CKEDITOR_MEDIA_PREFIX = "/media/ckeditor/"
+# CKEDITOR_UPLOAD_PREFIX = "http://fortezzeimperiali/media/uploads/"
+# CKEDITOR_RESTRICT_BY_USER = True
+# CKEDITOR_IMAGE_BACKEND = "pillow"
 
 
 # Default primary key field type
