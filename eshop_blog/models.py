@@ -1,9 +1,8 @@
 from django.db import models
 from django.urls import reverse
-from ckeditor_uploader.fields import RichTextUploadingField
 from django.db.models import Q
 from eshop_accounts.models import User
-from jalali_date.fields import  SplitJalaliDateTimeField
+
 
 # Create your models here.
 
@@ -54,9 +53,9 @@ class Blog(models.Model):
     name = models.CharField(max_length=200,verbose_name='نام')
     slug = models.SlugField(max_length=200, unique=True,verbose_name='نام در آدرس صفحه')
     image = models.ImageField(verbose_name='تصویر شاخص')
-    description = RichTextUploadingField(verbose_name='توضیحات')
+    description = models.TextField(verbose_name='توضیحات')
     available = models.BooleanField(default=True,verbose_name='فعال/غیرفعال')
-    created = SplitJalaliDateTimeField()
+    created = models.DateTimeField()
     writer= models.ForeignKey(User, on_delete=models.CASCADE,verbose_name='نویسنده')
 
 
